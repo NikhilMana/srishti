@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MediaPipe Hands + Pose</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <div class="container">
+    <h2>Pose and Hand Tracking</h2>
+    <div class="video-container">
+      <video id="inputVideo" width="640" height="480" autoplay playsinline></video>
+      <canvas id="outputCanvas" width="640" height="480"></canvas>
+      <div id="gestureOutput" style="position: absolute; top: 10px; left: 10px; font-size: 28px; font-weight: bold; color: white; background-color: rgba(0,0,0,0.5); padding: 10px; border-radius: 8px;">
+        Waiting for gesture...
+      </div>
+    </div>
+    <div class="gesture-display">
+      <h3>Recognized Gestures</h3>
+      <div id="gestureList" class="gesture-list">
+        <!-- Gestures will be added here dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MediaPipe Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
