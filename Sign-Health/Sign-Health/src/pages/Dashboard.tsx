@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from "@/components/ui/button";
 import Navigation from '@/components/Navigation';
@@ -53,6 +52,15 @@ const Dashboard = () => {
                 <h2 className="text-xl font-semibold mb-4">Upcoming Appointments</h2>
                 <p className="text-gray-600 mb-4">View and manage your healthcare appointments.</p>
                 <Button className="bg-healthcare-600 hover:bg-healthcare-700">View Schedule</Button>
+              </div>
+
+              {/* Srishti Card */}
+              <div className="bg-healthcare-50 rounded-lg p-6 border border-healthcare-100">
+                <h2 className="text-xl font-semibold mb-4">Gesture Detection</h2>
+                <p className="text-gray-600 mb-4">Use our advanced gesture detection system to communicate through sign language.</p>
+                <Button asChild className="bg-healthcare-600 hover:bg-healthcare-700">
+                  <Link to="/srishti">Open Gesture Detection</Link>
+                </Button>
               </div>
             </div>
             
